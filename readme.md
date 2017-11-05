@@ -9,7 +9,7 @@ mvn package
 
 # Running the Proxy
 ```
-java -Xmx25m -jar target/prometeo-auth-1.0-SNAPSHOT.jar -DDESTINATION_URL=http://docs.spring.io/ -DURL_MAPPINGS=/* --security.user.password=testing
+java -Xmx25m -jar target/prometeo-auth-1.0-SNAPSHOT.jar --DESTINATION_URL=http://docs.spring.io/ --URL_MAPPINGS=/* --USER_PASSWORD=testing
 ```
 
 # Testing thw proxy with Postman
