@@ -14,13 +14,13 @@ mvn package
 
 # Running the Proxy
 ```
-java -Xmx25m -jar target/prometeo-auth-1.0-SNAPSHOT.jar --DESTINATION_URL=http://docs.spring.io/ --URL_MAPPINGS=/* --USER_PASSWORD=testing
+java -Xmx25m -jar target/prometeo-auth-1.0-SNAPSHOT.jar --DESTINATION_URL=http://docs.spring.io/ --URL_MAPPINGS=/* --USER_PASSWORD=testing --HTTP_PORT=8081
 ```
 
 # Testing the proxy with Postman
 
 - **Method**: GET
-- **URL**: http://localhost:8080/spring-boot/docs/current/reference/html/boot-features-security.html
+- **URL**: http://localhost:8081/spring-boot/docs/current/reference/html/boot-features-security.html
 - **Headers**: Authorization: Basic dXNlcjp0ZXN0aW5n
 
 To generate the basic authentication header use for example a generator like [this](https://www.blitter.se/utils/basic-authentication-header-generator/) passing:
