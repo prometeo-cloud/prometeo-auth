@@ -29,4 +29,4 @@ should produce the following result: **Authorization: Basic dXNlcjp0ZXN0aW5n**
 |---|---|---|
 | DESTINATION_URL   | The root of the site the proxy points to.  | http://docs.spring.io/  |
 | URL_MAPPINGS  | The pattern for filtering the paths which are to be accessible.  | "/*" for everything  |
-| security.user.password  | The password to use for authenticating **user**  | e.g. testing  |
+| USER_PASSWORD  | The password to use for authenticating **user**  | e.g. testing  |
