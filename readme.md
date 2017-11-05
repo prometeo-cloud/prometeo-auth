@@ -25,8 +25,14 @@ To generate the basic authentication header use for example a generator like [th
 
 should produce the following result: **Authorization: Basic dXNlcjp0ZXN0aW5n**
 
+# Environment Variables
+
+The following variables configure the behaviour of the proxy:
+
 | Environment Var  | Description  | Example  |   
 |---|---|---|
 | DESTINATION_URL   | The root of the site the proxy points to.  | http://docs.spring.io/  |
 | URL_MAPPINGS  | The pattern for filtering the paths which are to be accessible.  | "/*" for everything  |
-| USER_PASSWORD  | The password to use for authenticating **user**  | e.g. testing  |
+| USER_PASSWORD  | The password to use for authenticating the "**user**" username. | e.g. testing  |
+
+**NOTE**: the username is always "user".
