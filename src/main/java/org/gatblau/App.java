@@ -15,17 +15,19 @@ import java.util.Map;
 @SpringBootApplication
 public class App {
 
-    @Value("${DESTINATION_URL:https://docs.spring.io/}")
+    @Value("${DESTINATION_URL}")
     private String _destinationURL;
+
+    @Value("${URL_MAPPINGS:/*}")
+    private String _urlMappings;
 
     @Bean
     public ServletRegistrationBean proxyServlet(final ServletConfig dispatcherServlet) throws ServletException {
         ProxyServlet.Transparent proxyServlet = new ProxyServlet.Transparent();
         final Map<String, String> params = new HashMap<String, String>();
         params.put("proxyTo", _destinationURL);
-        params.put("prefix", "/proxy");
         params.put("idleTimeout", "5000");
-        ServletRegistrationBean servletRegistrationBean = new ServletRegistrationBean(proxyServlet, "/*");
+        ServletRegistrationBean servletRegistrationBean = new ServletRegistrationBean(proxyServlet, _urlMappings);
         servletRegistrationBean.setAsyncSupported(true);
         servletRegistrationBean.setName("proxyServlet");
         servletRegistrationBean.setInitParameters(params);
