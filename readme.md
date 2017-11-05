@@ -41,5 +41,6 @@ The following variables configure the behaviour of the proxy:
 | DESTINATION_URL   | The root of the site the proxy points to.  | http://docs.spring.io/  |
 | URL_MAPPINGS  | The pattern for filtering the paths which are to be accessible.  | "/*" for everything  |
 | USER_PASSWORD  | The password to use for authenticating the "**user**" username. | e.g. testing  |
+| HTTP_PORT  | The port the proxy is listening on. | The default is 8081  |
 
 **NOTE**: the username is always "user".
