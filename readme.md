@@ -17,7 +17,7 @@ mvn package
 java -Xmx25m -jar target/prometeo-auth-1.0-SNAPSHOT.jar --DESTINATION_URL=http://docs.spring.io/ --URL_MAPPINGS=/* --USER_PASSWORD=testing
 ```
 
-# Testing thw proxy with Postman
+# Testing the proxy with Postman
 
 - **Method**: GET
 - **URL**: http://localhost:8080/spring-boot/docs/current/reference/html/boot-features-security.html
@@ -32,7 +32,7 @@ should produce the following result: **Authorization: Basic dXNlcjp0ZXN0aW5n**
 
 **NOTE**: should the authentication header be wrong or missing the proxy responds with HTTP 404 (Not Found).
 
-# Environment Variables
+# Configuration via Environment Variables
 
 The following variables configure the behaviour of the proxy:
 
