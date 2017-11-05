@@ -1,6 +1,11 @@
-# Prometeo Authentication Microservice
-A transparent proxy authentication microservice for prometeo. 
-Built using Spring Boot and Jetty-Proxy with basic authentication.
+# Prometeo Authentication Micro-service
+A transparent proxy authentication micro-service for Prometeo. 
+
+Built using Spring Boot and Jetty-Proxy.
+ 
+Support HTTP Basic Authentication. 
+
+HTTP requests to the proxy should be done over a TLS connection to prevent a [man-in-the-middle attack](https://en.wikipedia.org/wiki/Man-in-the-middle_attack).
 
 # Build
 ```
@@ -24,6 +29,8 @@ To generate the basic authentication header use for example a generator like [th
 - password = testing
 
 should produce the following result: **Authorization: Basic dXNlcjp0ZXN0aW5n**
+
+**NOTE**: should the authentication header is wrong or missing the proxy responds with HTTP 404 (Not Found).
 
 # Environment Variables
 
