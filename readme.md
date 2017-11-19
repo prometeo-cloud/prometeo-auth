@@ -1,9 +1,9 @@
 # Prometeo Authentication Micro-service
-A transparent proxy authentication micro-service for Prometeo. 
+A transparent proxy authentication micro-service for Prometeo.
 
 Built using Spring Boot and Jetty-Proxy.
- 
-Supports [HTTP Basic Authentication](https://en.wikipedia.org/wiki/Basic_access_authentication). 
+
+Supports [HTTP Basic Authentication](https://en.wikipedia.org/wiki/Basic_access_authentication).
 
 HTTP requests to the proxy should be done over a TLS connection to prevent a [man-in-the-middle attack](https://en.wikipedia.org/wiki/Man-in-the-middle_attack).
 
@@ -42,5 +42,6 @@ The following variables configure the behaviour of the proxy:
 | URL_MAPPINGS  | The pattern for filtering the paths which are to be accessible.  | "/*" for everything  |
 | USER_PASSWORD  | The password to use for authenticating the "**user**" username. | e.g. testing  |
 | HTTP_PORT  | The port the proxy is listening on. | The default is 8081  |
+| NO_PROXY | The URLs that should be excluded from proxying (on servers that should be contacted directly). | The default is none. |
 
 **NOTE**: the username is always "user".
